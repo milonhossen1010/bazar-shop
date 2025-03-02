@@ -1,8 +1,42 @@
+"use client"
+import  { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchProducts } from '../redux/features/products/productSlice';
+import { RootState, AppDispatch } from '../redux/store/store';
 
 export default function Product() {
+  const dispatch: AppDispatch = useDispatch(); 
+  const products = useSelector((state: RootState) => state.products.items);
+  const status = useSelector((state: RootState) => state.products.status);
+  const error = useSelector((state: RootState) => state.products.error);
+
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(fetchProducts()); 
+    }
+  }, [status, dispatch]);
+
+  if (status === 'loading') {
+    return <div className='min-h-screen flex items-center justify-center bg-skyText'>Loading...</div>;
+  }
+
+  if (status === 'failed') {
+    return <div>Error: {error}</div>;
+  }
+
   return (
     <div>
-      Product
+      <h1>Products</h1>
+      <ul>
+        {products.map(product => (
+          <li key={product._id}>
+            {product?.images.map(img => (
+              <img src={img} alt={product.name} />
+            ))}{' '}
+            {product.name}
+          </li>
+        ))}
+      </ul>
     </div>
-  )
+  );
 }

@@ -16,6 +16,13 @@ export interface CategoryProps {
   description: string;
 }
 
+//category state
+export interface CategoriesState {
+  items: CategoryProps[];
+  status: 'idle' | 'loading' | 'succeeded' | 'failed';
+  error: string | null;
+}
+
 export interface ProductProps {
   _id: number;
   _base: string;
@@ -33,6 +40,13 @@ export interface ProductProps {
   colors: [string];
   category: string;
   brand: string;
+}
+
+//product state
+export interface ProductsState {
+  items: ProductProps[];
+  status: 'idle' | 'loading' | 'succeeded' | 'failed';
+  error: string | null;
 }
 
 export interface BlogProps {
@@ -58,4 +72,17 @@ export interface OrderTypes {
   paymentId: string;
   paymentMethod: string;
   userEmail: string;
+}
+
+
+//Cart
+export interface CartItem {
+  id: number;
+  name: string;
+  price: number;
+  quantity: number;
+}
+
+export interface CartState {
+  items: CartItem[];
 }

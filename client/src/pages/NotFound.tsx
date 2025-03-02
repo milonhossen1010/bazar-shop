@@ -5,7 +5,7 @@ import {
   HiRss,
 } from 'react-icons/hi2';
 import { LuChevronRight } from 'react-icons/lu';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Container from '../ui/Container';
 import LinkButton from '../ui/LinkButton';
 
@@ -74,10 +74,10 @@ export default function NotFound()  {
                   </div>
                   <div className="flex-auto">
                     <h3 className="text-sm font-semibold leading-6 text-gray-900">
-                      <a href={link.href}>
+                      <Link to={link.href}>
                         <span className="absolute inset-0" aria-hidden="true" />
                         {link.name}
-                      </a>
+                      </Link>
                     </h3>
                     <p className="mt-2 text-sm leading-6 text-gray-600">
                       {link.description}

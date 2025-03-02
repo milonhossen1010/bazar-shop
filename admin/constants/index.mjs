@@ -1,4 +1,4 @@
-const baseUrl = 'http://127.0.0.1:8000';
+ 
 const cat = {
   tvAndAudio: "tvAndAudio",
   tvBox: "tvBox",
@@ -17,7 +17,8 @@ export const categories = [
   {
     _id: 1001,
     name: 'TV & Audio',
-    image: `${baseUrl}/public/category/tv-audio.jpg`,
+    image:
+      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/tv-audio.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'tvAndAudio',
@@ -25,7 +26,8 @@ export const categories = [
   {
     _id: 1002,
     name: 'TV Box',
-    image: 'https://i.ibb.co/71hR65V/catTvBox.webp',
+    image:
+      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/tv-box.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'tvBox',
@@ -33,7 +35,8 @@ export const categories = [
   {
     _id: 1003,
     name: 'Power Tools',
-    image: 'https://i.ibb.co/0V0g6Gz/cat-Powertool.webp',
+    image:
+      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/power-tools.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'powerTools',
@@ -41,7 +44,8 @@ export const categories = [
   {
     _id: 1004,
     name: 'Headphones',
-    image: 'https://i.ibb.co/zST2Xdp/cat-Headphone.webp',
+    image:
+      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/headphone.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'headphones',
@@ -49,7 +53,8 @@ export const categories = [
   {
     _id: 1005,
     name: 'Cell Phones',
-    image: 'https://i.ibb.co/jgk59BL/catPhone.webp',
+    image:
+      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/phone.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'cellPhones',
@@ -57,7 +62,8 @@ export const categories = [
   {
     _id: 1006,
     name: 'Smart Watches',
-    image: 'https://i.ibb.co/B4NKfBZ/cat-Smart-Watch.webp',
+    image:
+      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/watch.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'smartWatches',
@@ -65,7 +71,8 @@ export const categories = [
   {
     _id: 1007,
     name: 'Game & Video',
-    image: 'https://i.ibb.co/4gwLwT2/cat-Gaming.webp',
+    image:
+      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/game.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'gameAndVideo',
@@ -73,7 +80,8 @@ export const categories = [
   {
     _id: 1008,
     name: 'Robot Clean',
-    image: 'https://i.ibb.co/xjpdQrr/cat-Robot-Clean.webp',
+    image:
+      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/robot-clean.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'robotClean',
@@ -81,7 +89,8 @@ export const categories = [
   {
     _id: 1009,
     name: 'Sport Watches',
-    image: 'https://i.ibb.co/HdNVLzh/cat-Sport-Watch.webp',
+    image:
+      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/sport-watches.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'sportWatches',
@@ -89,7 +98,8 @@ export const categories = [
   {
     _id: 1010,
     name: 'Tablets',
-    image: 'https://i.ibb.co/qCzTx4F/cat-Tablet.webp',
+    image:
+      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/tablets.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'tablets',
@@ -97,7 +107,8 @@ export const categories = [
   {
     _id: 1011,
     name: 'Computers & Laptop',
-    image: 'https://i.ibb.co/74bZ8PH/cat-Computer.webp',
+    image:
+      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/laptop.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'computersAndLaptop',
@@ -105,7 +116,8 @@ export const categories = [
   {
     _id: 1012,
     name: 'Cameras & Photos',
-    image: 'https://i.ibb.co/SVQVWSS/cat-Camera.webp',
+    image:
+      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/camera.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'camerasAndPhotos',
