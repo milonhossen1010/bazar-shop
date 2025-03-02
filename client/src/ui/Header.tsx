@@ -20,7 +20,7 @@ export default function Header() {
   const [searchText, setSearchText] = useState('');
 
   return (
-    <header className=" w-full bg-white">
+    <header className=" w-full bg-white md:sticky md:top-0 z-50">
       {/* Top Header  */}
       <div className=" max-w-screen-2xl mx-auto h-20 flex items-center justify-between px-4">
         {/* Logo  */}
@@ -70,7 +70,7 @@ export default function Header() {
 
       {/* Bottom Header  */}
       <div className="w-full bg-skyText text-white">
-        <Container className="py-4 max-w-4xl flex items-center gap-5 justify-center">
+        <Container className="py-3 max-w-4xl flex items-center gap-5 justify-center">
           {/* Category Nav Menu  */}
           <CategoriesNav />
 

@@ -18,7 +18,7 @@ export const categories = [
     _id: 1001,
     name: 'TV & Audio',
     image:
-      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/tv-audio.jpg',
+      'https://minimog-4437.kxcdn.com/supergear/wp-content/uploads/sites/2/2022/02/cat-tv-audio.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'tvAndAudio',
@@ -27,7 +27,7 @@ export const categories = [
     _id: 1002,
     name: 'TV Box',
     image:
-      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/tv-box.jpg',
+      'https://minimog-4437.kxcdn.com/supergear/wp-content/uploads/sites/2/2022/02/cat-tv-box.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'tvBox',
@@ -36,7 +36,7 @@ export const categories = [
     _id: 1003,
     name: 'Power Tools',
     image:
-      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/power-tools.jpg',
+      'https://minimog-4437.kxcdn.com/supergear/wp-content/uploads/sites/2/2022/02/cat-power-tools.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'powerTools',
@@ -45,7 +45,7 @@ export const categories = [
     _id: 1004,
     name: 'Headphones',
     image:
-      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/headphone.jpg',
+      'https://minimog-4437.kxcdn.com/supergear/wp-content/uploads/sites/2/2022/02/cat-headphones.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'headphones',
@@ -54,7 +54,7 @@ export const categories = [
     _id: 1005,
     name: 'Cell Phones',
     image:
-      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/phone.jpg',
+      'https://minimog-4437.kxcdn.com/supergear/wp-content/uploads/sites/2/2022/02/cat-cell-phone.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'cellPhones',
@@ -63,7 +63,7 @@ export const categories = [
     _id: 1006,
     name: 'Smart Watches',
     image:
-      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/watch.jpg',
+      'https://minimog-4437.kxcdn.com/supergear/wp-content/uploads/sites/2/2022/02/cat-smart-watches.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'smartWatches',
@@ -72,7 +72,7 @@ export const categories = [
     _id: 1007,
     name: 'Game & Video',
     image:
-      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/game.jpg',
+      'https://minimog-4437.kxcdn.com/supergear/wp-content/uploads/sites/2/2022/02/cat-game-video.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'gameAndVideo',
@@ -81,7 +81,7 @@ export const categories = [
     _id: 1008,
     name: 'Robot Clean',
     image:
-      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/robot-clean.jpg',
+      'https://minimog-4437.kxcdn.com/supergear/wp-content/uploads/sites/2/2022/02/cat-robot-clean.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'robotClean',
@@ -90,7 +90,7 @@ export const categories = [
     _id: 1009,
     name: 'Sport Watches',
     image:
-      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/sport-watches.jpg',
+      'https://minimog-4437.kxcdn.com/supergear/wp-content/uploads/sites/2/2022/02/cat-spot-watches.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'sportWatches',
@@ -99,7 +99,7 @@ export const categories = [
     _id: 1010,
     name: 'Tablets',
     image:
-      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/tablets.jpg',
+      'https://minimog-4437.kxcdn.com/supergear/wp-content/uploads/sites/2/2022/02/cat-tablets.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'tablets',
@@ -108,7 +108,7 @@ export const categories = [
     _id: 1011,
     name: 'Computers & Laptop',
     image:
-      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/laptop.jpg',
+      'https://minimog-4437.kxcdn.com/supergear/wp-content/uploads/sites/2/2022/02/cat-computers-laptop.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'computersAndLaptop',
@@ -117,7 +117,7 @@ export const categories = [
     _id: 1012,
     name: 'Cameras & Photos',
     image:
-      'https://raw.githubusercontent.com/milonhossen1010/bazar-shop/refs/heads/main/admin/public/category/camera.jpg',
+      'https://minimog-4437.kxcdn.com/supergear/wp-content/uploads/sites/2/2022/02/cat-cameras-audio.jpg',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellendus dolore.',
     _base: 'camerasAndPhotos',
@@ -127,30 +127,33 @@ export const categories = [
 export const highlightsProducts = [
   {
     _id: 3001,
-    name: "New Deals at Best Prices",
-    title: "From $40.00",
-    buttonTitle: "Browse Deals",
-    image: "https://i.ibb.co/G951N5B/highlights-One.webp",
-    _base: "/product",
-    color: "#000000",
+    name: 'New Deals at Best Prices',
+    title: 'From $40.00',
+    buttonTitle: 'Browse Deals',
+    image:
+      'https://minimog-4437.kxcdn.com/supergear/wp-content/uploads/sites/2/2022/02/home-banner-01.jpg',
+    _base: '/product',
+    color: '#000000',
   },
   {
     _id: 3002,
-    name: "Colorful Redmi  Note 6 Pro",
-    title: "From $40.00",
-    buttonTitle: "Shop Cellphone",
-    image: "https://i.ibb.co/bLRNKGq/highlights-Two.webp",
-    _base: "/category/cellPhones",
-    color: "#ffffff",
+    name: 'Colorful Redmi  Note 6 Pro',
+    title: 'From $40.00',
+    buttonTitle: 'Shop Cellphone',
+    image:
+      'https://minimog-4437.kxcdn.com/supergear/wp-content/uploads/sites/2/2022/02/home-banner-02.jpg',
+    _base: '/category/cellPhones',
+    color: '#ffffff',
   },
   {
     _id: 3003,
-    name: "1000 mAh Power Bank",
-    title: "From $40.00",
-    buttonTitle: "Shop Now",
-    image: "https://i.ibb.co/svWYstT/highlights-Three.webp",
-    _base: "/product",
-    color: "#ffffff",
+    name: '1000 mAh Power Bank',
+    title: 'From $40.00',
+    buttonTitle: 'Shop Now',
+    image:
+      'https://minimog-4437.kxcdn.com/supergear/wp-content/uploads/sites/2/2022/02/home-banner-03.jpg',
+    _base: '/product',
+    color: '#ffffff',
   },
 ];
 

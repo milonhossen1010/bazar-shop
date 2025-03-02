@@ -17,7 +17,7 @@ export default function Product() {
   }, [status, dispatch]);
 
   if (status === 'loading') {
-    return <div className='min-h-screen flex items-center justify-center bg-skyText'>Loading...</div>;
+    return <div className='min-h-screen flex items-center justify-center '>Loading...</div>;
   }
 
   if (status === 'failed') {
@@ -28,8 +28,8 @@ export default function Product() {
     <div>
       <h1>Products</h1>
       <ul>
-        {products.map(product => (
-          <li key={product._id}>
+        {products.map((product, index) => (
+          <li key={index}>
             {product?.images.map(img => (
               <img src={img} alt={product.name} />
             ))}{' '}

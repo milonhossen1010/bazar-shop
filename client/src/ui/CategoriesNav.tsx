@@ -15,7 +15,7 @@ export default function CategoriesNav() {
   const error = useSelector((state: RootState) => state.categoris.error);
 
   useEffect(() => {
-    if (status === 'idle') {
+    if (status === 'idle' ) {
       dispatch(fetchCategories());
     }
   }, [status, dispatch]);

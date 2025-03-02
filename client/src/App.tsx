@@ -1,13 +1,15 @@
-import Container from './ui/Container';
+import BannerCategories from './ui/BannerCategories';
+import Categories from './ui/Categories';
+import HighLights from './ui/HighLights';
+import HomeBanner from './ui/HomeBanner';
 
 function App() {
   return (
     <main>
-  
-      <Container>
-        <h1 className="text-3xl font-bold underline"> Hello world! </h1>
-      </Container>
-   
+      <BannerCategories />
+      <HomeBanner />
+      <HighLights />
+      <Categories />
     </main>
   );
 }
