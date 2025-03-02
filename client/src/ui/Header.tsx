@@ -1,10 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { logo } from '../assets';
 import { IoClose, IoSearchOutline } from 'react-icons/io5';
 import { FiShoppingBag, FiStar, FiUser } from 'react-icons/fi';
 import Container from './Container';
 import { FaChevronDown } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import {config} from "../../config"
+import { getData } from '../lib';
+import { Menu, MenuButton, MenuItem, MenuItems, Transition } from "@headlessui/react"
+import {CategoryProps} from "../../type"
 const bottomNavigation = [
   { title: 'Home', link: '/' },
   { title: 'Shop', link: '/product' },
@@ -17,6 +21,25 @@ const bottomNavigation = [
 export default function Header() {
   //Search text
   const [searchText, setSearchText] = useState('');
+
+  //Category
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+
+    //Data fetch function
+    const fetchData = async () => {
+      const endpoint = `${config?.baseUrl}/categories`;
+      try {
+        const data = await getData(endpoint);
+        setCategories(data)
+      } catch (error) {
+        console.error("Error fetching data", error)
+      }
+    }
+
+    fetchData()
+  }, [])
 
   return (
     <header className=" w-full bg-white">
@@ -70,9 +93,40 @@ export default function Header() {
       {/* Bottom Header  */}
       <div className="w-full bg-skyText text-white">
         <Container className="py-4 max-w-4xl flex items-center gap-5 justify-center">
-          <p className="flex items-center gap-1 font-semibold">
-            Select Category <FaChevronDown />{' '}
-          </p>
+          <Menu>
+            <MenuButton className="inline-flex items-center gap-2 rounded-md border border-white/80 hover:border-white py-1.5 px-3 font-semibold text-white/90 hover:text-white">
+              Select Category <FaChevronDown className="text-base mt-1" />
+            </MenuButton>
+            <Transition
+              enter="transition ease-out duration-75"
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
+              leave="transition ease-in duration-100"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
+            >
+              <MenuItems
+                anchor="bottom end"
+                className="w-52 origin-top-right rounded-xl border border-white/5 bg-skyText p-1 text-sm/6 text-white [--anchor-gap:var(--spacing-1)] focus:outline-none hover:text-white z-50"
+              >
+                {categories.map((item: CategoryProps) => (
+                  <MenuItem>
+                    <Link
+                      className="flex w-full items-center gap-2 rounded-lg py-2 px-3 data-[focus]:bg-white/20 tracking-wide"
+                      to={`/category/${item?._base}`}
+                    >
+                      <img
+                        src={item?.image}
+                        alt="categoryImage"
+                        className="w-6 h-6 rounded-md"
+                      />
+                      {item?.name}
+                    </Link>
+                  </MenuItem>
+                ))}
+              </MenuItems>
+            </Transition>
+          </Menu>
 
           {/* Menu Listing  */}
           {bottomNavigation.map((item, index) => (
