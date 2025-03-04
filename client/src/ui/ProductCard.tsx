@@ -2,6 +2,8 @@ import { ProductProps } from '../../type';
 import { Link, useNavigate } from 'react-router-dom';
 import Rating from './Rating';
 import PriceTag from './PriceTag';
+
+
 interface Props {
   item: ProductProps;
   setSearchText?: any;
@@ -40,14 +42,21 @@ export default function ProductCard({ item, setSearchText }: Props) {
         <div className="text-base text-lightText flex items-center">
           <Rating rating={item?.rating} />
         </div>
-        
+
         <div>
-          <PriceTag regularPrice={item?.regularPrice} discountedPrice={item?.discountedPrice} />
+          <PriceTag
+            regularPrice={item?.regularPrice}
+            discountedPrice={item?.discountedPrice}
+          />
         </div>
 
-        <button className="bg-[#f7f7f7] uppercase text-xs py-3 text-center rounded-full font-semibold hover:bg-black hover:text-white hover:scale-105 duration-200 cursor-pointer">
-          Add to Cart
-        </button>
+        {/* Add to cart  */}
+        <Link
+           to={`/product/${item._id}`}
+          className="bg-[#f7f7f7] uppercase text-xs py-3 text-center rounded-full font-semibold hover:bg-black hover:text-white hover:scale-105 duration-200 cursor-pointer"
+        >
+          Buy Now
+        </Link>
       </div>
     </div>
   );

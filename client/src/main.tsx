@@ -12,6 +12,7 @@ import Profile from './pages/Profile.tsx'
 import Success from './pages/Success.tsx'
 import NotFound from './pages/NotFound.tsx'
 import Orders from './pages/Orders.tsx'
+import ProductDetails from './pages/ProductDetails.tsx'
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/product/:id',
-        element: <Product />,
+        element: <ProductDetails />,
       },
       {
         path: '/Cancel',

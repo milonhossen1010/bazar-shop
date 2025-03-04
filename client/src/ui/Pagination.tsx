@@ -24,9 +24,9 @@ const Items = ({ currentItems }: ItemsProps) => {
 
 export default function Pagination() {
   //Pagination State
-    const [itemOffset, setItemOffset] = useState(0);
+  const [itemOffset, setItemOffset] = useState(0);
   const [itemStart, setItemStart] = useState(1);
-  
+
   //Products
   const dispatch: AppDispatch = useDispatch();
   const products = useSelector((state: RootState) => state.products.items);
@@ -49,9 +49,7 @@ export default function Pagination() {
 
   //Pagination
   const itemsPerPage = 10;
-
   const endOffset = itemOffset + itemsPerPage;
-  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
   const currentItems = products.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(products.length / itemsPerPage);
 

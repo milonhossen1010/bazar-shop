@@ -2,7 +2,7 @@ import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 
 
 interface RatingProps  {
-  rating: number;
+  rating: any;
 };
 
 export default function Rating  ({ rating }: RatingProps) {

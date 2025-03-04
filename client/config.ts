@@ -11,7 +11,7 @@ const checkConfig = (server: string): Config | {} => {
     };
   } else if (server === 'local') {
     config = {
-      baseUrl: 'https://bazar-shop.onrender.com',
+      baseUrl: 'http://localhost:8000',
     };
   } else {
     config = {
