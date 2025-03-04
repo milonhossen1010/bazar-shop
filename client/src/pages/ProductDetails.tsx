@@ -11,11 +11,12 @@ import FormattedPrice from "../ui/FormattedPrice";
 import { productPayment } from "../assets";
 import Rating from "../ui/Rating";
 import Container from "../ui/Container";
+import FullScreenLoading from "../ui/FullScreenLoading";
 
 
 export default function ProductDetails() {
   const [productDetails, setProductsDetails] = useState<ProductProps | null>(null);
-  // const [loading, setLoading] = useState(false);
+  const [loader, setLoader] = useState(false);
   const [imgUrl, setImgUrl] = useState('');
   const [color, setColor] = useState('');
   const { id } = useParams();
@@ -26,10 +27,13 @@ export default function ProductDetails() {
        const fetchData = async () => {
          const endpoint = `${config?.baseUrl}/products/${id}`;
          try {
+           setLoader(true)
            const data = await getData(endpoint);
            setProductsDetails(data);
          } catch (error) {
            console.error('Error fetching data', error);
+         } finally {
+           setLoader(false)
          }
        };
   
@@ -43,6 +47,10 @@ export default function ProductDetails() {
       setColor(productDetails?.colors[0]);
     }
   }, [productDetails]);
+
+  if (loader) {
+    return <FullScreenLoading/>
+  }
 
   return (
     <Container>
