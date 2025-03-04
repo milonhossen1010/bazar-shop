@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { Menu, MenuButton, MenuItem, MenuItems, Transition } from '@headlessui/react';
 import { Link } from 'react-router-dom';
 import { FaChevronDown } from 'react-icons/fa';
+import Loading from './Loading';
 
 export default function CategoriesNav() {
   //Categories
@@ -21,7 +22,7 @@ export default function CategoriesNav() {
   }, [status, dispatch]);
 
   if (status === 'loading') {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   if (status === 'failed') {

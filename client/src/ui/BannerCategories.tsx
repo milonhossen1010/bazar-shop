@@ -6,6 +6,7 @@ import CustomLeftArrow from "./CustomLeftArrow";
 import { CategoryProps } from "../../type";
 import { Link } from "react-router-dom";
 import 'react-multi-carousel/lib/styles.css';
+import Loading from "./Loading";
 
 
 const responsive = {
@@ -34,7 +35,7 @@ export default function BannerCategories() {
   const error = useSelector((state: RootState) => state.categoris.error);
 
   if (status === 'loading') {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   if (status === 'failed') {

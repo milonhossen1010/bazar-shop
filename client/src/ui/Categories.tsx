@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Container from './Container';
 import Title from './Title';
 import { CategoryProps } from '../../type';
+import Loading from './Loading';
  
 export default function Categories() {
   //Categories
@@ -16,7 +17,7 @@ export default function Categories() {
     
 
   if (status === 'loading') {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   if (status === 'failed') {
