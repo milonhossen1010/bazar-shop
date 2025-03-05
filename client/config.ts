@@ -15,13 +15,12 @@ const checkConfig = (server: string): Config | {} => {
     };
   } else {
     config = {
-      baseUrl: '', 
+      baseUrl: '',
     };
   }
 
   return config;
 };
 
-
-export const selectServer = "local"
+export const selectServer = 'local';
 export const config = checkConfig(selectServer) as Config;

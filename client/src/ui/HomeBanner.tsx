@@ -4,7 +4,7 @@ import LinkButton from "./LinkButton";
 
 export default function HomeBanner() {
   return (
-    <Container className="relative py-5 overflow-hidden">
+    <Container className="relative  py-5   overflow-hidden">
       <div className="relative">
         <img
           src={homeBanner}
@@ -13,7 +13,7 @@ export default function HomeBanner() {
         />
         <div className="w-full h-full absolute top-0 left-0 bg-black/10" />
       </div>
-      <div className="absolute inset-0 flex flex-col justify-center px-10">
+      <div className="absolute inset-0 flex flex-col justify-center px-10 py-5">
         <h2 className="text-xl md:text-4xl lg:text-6xl text-white font-bold">
           Mi Air Purifier
         </h2>

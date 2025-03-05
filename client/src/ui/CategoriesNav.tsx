@@ -6,14 +6,14 @@ import { useEffect } from 'react';
 import { Menu, MenuButton, MenuItem, MenuItems, Transition } from '@headlessui/react';
 import { Link } from 'react-router-dom';
 import { FaChevronDown } from 'react-icons/fa';
-import Loading from './Loading';
+// import Loading from './Loading';
 
 export default function CategoriesNav() {
   //Categories
   const dispatch: AppDispatch = useDispatch();
-  const categories = useSelector((state: RootState) => state.categoris.items);
-  const status = useSelector((state: RootState) => state.categoris.status);
-  const error = useSelector((state: RootState) => state.categoris.error);
+  const categories = useSelector((state: RootState) => state.categories.items);
+  const status = useSelector((state: RootState) => state.categories.status);
+  const error = useSelector((state: RootState) => state.categories.error);
 
   useEffect(() => {
     if (status === 'idle' ) {
@@ -21,13 +21,12 @@ export default function CategoriesNav() {
     }
   }, [status, dispatch]);
 
-  if (status === 'loading') {
-    return <Loading />;
-  }
+  
 
   if (status === 'failed') {
     return <div>Error: {error}</div>;
   }
+  
   return (
     <>
       <Menu>

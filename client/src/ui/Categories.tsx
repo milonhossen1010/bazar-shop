@@ -10,9 +10,9 @@ import Loading from './Loading';
 export default function Categories() {
   //Categories
  
-  const categories = useSelector((state: RootState) => state.categoris.items);
-  const status = useSelector((state: RootState) => state.categoris.status);
-  const error = useSelector((state: RootState) => state.categoris.error);
+  const categories = useSelector((state: RootState) => state.categories.items);
+  const status = useSelector((state: RootState) => state.categories.status);
+  const error = useSelector((state: RootState) => state.categories.error);
 
     
 

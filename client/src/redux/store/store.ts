@@ -1,49 +1,41 @@
-// app/store.ts
 import { configureStore } from '@reduxjs/toolkit';
-import { persistStore } from 'redux-persist';
-// import storage from 'redux-persist/lib/storage';
-import productsReducer from '../features/products/productSlice';
-import categoriesReducer from '../features/products/categorySlice';
-// import cartReducer, { CartState } from '../features/cartSlice';
-// import { ProductsState, CategoriesState } from './../../../type';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import { combineReducers } from 'redux';
+import cartReducer from './../features/products/CartSlice';
+import productsReducer from './../features/products/productSlice';
+import categoriesReducer from './../features/products/categorySlice';
 
-// Define the root state type
-// export interface RootState {
-//   products: ProductsState;
-//   categories: CategoriesState;
-//   // cart: CartState;
-// }
+const cartPersistConfig = {
+  key: 'cart',
+  storage,
+};
 
-// Persist configuration
-// const persistConfig = {
-//   key: 'root',
-//   storage,
-//   whitelist: ['cart'],
-// };
+const productsPersistConfig = {
+  key: 'products',
+  storage,
+};
 
-// const persistedCartReducer = persistReducer<CartState>(
-//   persistConfig,
-//   cartReducer
-// );
+const categoriesPersistConfig = {
+  key: 'categories',
+  storage,
+};
+
+const rootReducer = combineReducers({
+  cart: persistReducer(cartPersistConfig, cartReducer),
+  products: persistReducer(productsPersistConfig, productsReducer),
+  categories: persistReducer(categoriesPersistConfig, categoriesReducer),
+});
 
 export const store = configureStore({
-  reducer: {
-    products: productsReducer,
-    categoris: categoriesReducer,
-    // cart: persistedCartReducer,
-  },
+  reducer: rootReducer,
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
-      serializableCheck: {
-        // Ignore these action types
-        ignoredActions: ['persist/PERSIST', 'persist/REHYDRATE'],
-        // Ignore these paths in the state
-        ignoredPaths: ['register', 'rehydrate'],
-      },
+      serializableCheck: false,
     }),
 });
 
 export const persistor = persistStore(store);
-// Export the AppDispatch type
-export type AppDispatch = typeof store.dispatch;
+
 export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
