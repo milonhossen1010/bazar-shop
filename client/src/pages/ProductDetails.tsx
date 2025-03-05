@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import AddToCart from "../ui/AddToCart";
-import { IoClose } from "react-icons/io5";
 import PriceTag from "../ui/PriceTag";
 import { FaRegEye } from "react-icons/fa";
 import FormattedPrice from "../ui/FormattedPrice";
@@ -10,6 +9,7 @@ import Rating from "../ui/Rating";
 import Container from "../ui/Container";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store/store";
+
 
 
 export default function product() {
@@ -33,7 +33,9 @@ export default function product() {
     }
   }, [product]);
 
-  
+    if (!product) {
+      return <div className="text-center text-red-500">Product not found</div>;
+    }
 
   return (
     <Container>
@@ -72,19 +74,14 @@ export default function product() {
           </div>
           <p className="flex items-center">
             <FaRegEye className="mr-1" />{' '}
-            <span className="font-semibold mr-1">
-              {product?.reviews}
-            </span>{' '}
+            <span className="font-semibold mr-1">{product?.reviews}</span>{' '}
             peoples are viewing this right now
           </p>
           <p>
             You are saving{' '}
             <span className="text-base font-semibold text-green-500">
               <FormattedPrice
-                amount={
-                  product?.regularPrice! -
-                  product?.discountedPrice!
-                }
+                amount={product?.regularPrice! - product?.discountedPrice!}
               />
             </span>{' '}
             upon purchase
@@ -108,7 +105,7 @@ export default function product() {
                   className={`${
                     item === color
                       ? 'border border-black p-1 rounded-full'
-                      : 'border-transparent'
+                      : 'border border-gray-200 shadow-xl rounded-full'
                   }`}
                 >
                   <div
@@ -119,23 +116,17 @@ export default function product() {
                 </div>
               ))}
             </div>
-            {color && (
-              <button
-                onClick={() => setColor('')}
-                className="font-semibold mt-1 flex items-center gap-1 hover:text-red-600 duration-200"
-              >
-                <IoClose /> Clear
-              </button>
-            )}
           </div>
           <p>
             Brand: <span className="font-medium">{product?.brand}</span>
           </p>
           <p>
-            Category:{' '}
-            <span className="font-medium">{product?.category}</span>
+            Category: <span className="font-medium">{product?.category}</span>
           </p>
-          <AddToCart />
+
+          {/* Add To Cart */}
+          <AddToCart product={product} selectedColor={color} cartBtnShow={true} />
+
           <div className="bg-[#f7f7f7] p-5 rounded-md flex flex-col items-center justify-center gap-2">
             <img
               src={productPayment}

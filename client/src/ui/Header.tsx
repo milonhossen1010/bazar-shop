@@ -5,6 +5,8 @@ import { FiShoppingBag, FiStar, FiUser } from 'react-icons/fi';
 import Container from './Container';
 import { Link } from 'react-router-dom';
 import CategoriesNav from './CategoriesNav';
+import { useSelector } from 'react-redux';
+import { RootState } from '../redux/store/store';
 
 const bottomNavigation = [
   { title: 'Home', link: '/' },
@@ -18,6 +20,10 @@ const bottomNavigation = [
 export default function Header() {
   //Search text
   const [searchText, setSearchText] = useState('');
+
+  // Cart Item get from redux
+  const carts = useSelector((state: RootState) => state.cart.items)
+  const cartItemNumber = carts.reduce((total, product) => total + product.quantity, 0)
 
   return (
     <header className=" w-full bg-white md:sticky md:top-0 z-50">
@@ -55,14 +61,14 @@ export default function Header() {
           </Link>
           <Link to="/favorite" className="relative block">
             <FiStar className="hover:text-skyText duration-200 cursor-pointer" />
-            <span className="inline-flex items-center justify-center bg-redText text-white absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4 ">
+            <span className="inline-flex items-center justify-center bg-redText text-white absolute -top-1 -right-2 text-[11px] rounded-full w-4 h-4 font-semibold">
               0
             </span>
           </Link>
           <Link to="/cart" className="relative block">
             <FiShoppingBag className="hover:text-skyText duration-200 cursor-pointer" />
-            <span className="inline-flex items-center justify-center bg-redText text-white absolute -top-1 -right-2 text-[9px] rounded-full w-4 h-4 ">
-              0
+            <span className="inline-flex items-center justify-center bg-redText text-white absolute -top-1 -right-2 text-[11px] rounded-full w-4 h-4 font-semibold">
+              {cartItemNumber}
             </span>
           </Link>
         </div>

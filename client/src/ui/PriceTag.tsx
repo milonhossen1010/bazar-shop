@@ -13,7 +13,7 @@ export default function PriceTag ({ regularPrice, discountedPrice, className }: 
       <p className="line-through text-gray-500 font-medium">
         <FormattedPrice amount={regularPrice} />
       </p>
-      <p className="font-bold text-skyText">
+      <p className="font-bold text-black">
         <FormattedPrice amount={discountedPrice} />
       </p>
     </div>
